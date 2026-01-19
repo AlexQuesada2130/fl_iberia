@@ -5,13 +5,15 @@ class CustomTextFormFile extends StatelessWidget {
   final String? labelText;
   final String? helperText;
   final IconData? icon;
-  final IconData? suffixIcon;
+  final Widget? suffixIcon;
   final IconData? prefixIcon;
   final TextInputType? keyboardType;
   final bool obscureText;
 
   final String formProperty;
   final Map<String, String> formValues;
+
+  final String? Function(String?)? validator;
 
   const CustomTextFormFile({
     super.key,
@@ -26,6 +28,7 @@ class CustomTextFormFile extends StatelessWidget {
         false, // tambien se puede dejar required this.obscureText sin añadirle valor
     required this.formProperty,
     required this.formValues,
+    this.validator,
   });
 
   @override
@@ -36,19 +39,16 @@ class CustomTextFormFile extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText,
       onChanged: (value) => formValues[formProperty] = value,
-      validator: (value) {
-        if (value!.length < 6) {
-          return 'Mínimo 6 caracteres';
-        }
-        return null;
-      },
+
+      validator: validator,
+
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
         hintText: hintText,
         labelText: labelText,
         helperText: helperText,
         icon: icon != null ? Icon(icon) : null,
-        suffixIcon: Icon(suffixIcon),
+        suffixIcon: suffixIcon,
       ),
     );
   }
