@@ -27,7 +27,7 @@ class AppRoutes {
       route: 'espacios',
       icon: Icons.account_balance,
       name: 'Espacios Culturales',
-      screen: const Espaciosscreen(),
+      screen: const EspaciosScreen(),
     ),
   ];
 

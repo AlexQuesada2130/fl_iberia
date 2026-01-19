@@ -1,4 +1,4 @@
-import 'package:fl_pruebaexamen/screens/listview_screen.dart';
+import 'package:fl_pruebaexamen/screens/screens.dart';
 import 'package:fl_pruebaexamen/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -114,7 +114,10 @@ class _bodyForm extends StatelessWidget {
                   CustomTextFormFile(
                     hintText: 'Contraseña',
                     keyboardType: TextInputType.emailAddress,
-                    suffixIcon: Icons.remove_red_eye_outlined,
+                    suffixIcon: Icon(
+                      Icons.remove_red_eye_outlined,
+                      color: const Color.fromARGB(255, 255, 0, 0),
+                    ),
                     obscureText: true,
                     formProperty: 'password',
                     formValues: formValues,
@@ -208,7 +211,7 @@ class _bodyForm extends StatelessWidget {
                   ),
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => Registerscreen()),
                   ),
                 ),
               ],
