@@ -23,7 +23,7 @@ class _RegisterscreenState extends State<Registerscreen> {
   bool _switchValue = false;
   bool _switchValue2 = false;
   bool _switchValue3 = false;
-  bool _switchValue4 = false;
+  //bool _switchValue4 = false;
 
   @override
   Widget build(BuildContext context) {
