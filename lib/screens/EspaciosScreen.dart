@@ -1,3 +1,4 @@
+import 'package:fl_pruebaexamen/appTheme/appTheme.dart';
 import 'package:fl_pruebaexamen/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -7,11 +8,15 @@ class EspaciosScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 242, 242, 242),
+      backgroundColor: Apptheme.backgroundScreens,
       appBar: AppBar(
         backgroundColor: Colors.white,
+        automaticallyImplyLeading: true,
         elevation: 0,
-        leading: const Icon(Icons.arrow_back, color: Colors.black),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: Image.network(
           "https://1000logos.net/wp-content/uploads/2021/04/Iberia-logo.png", // Logo Iberia
           height: 100,
@@ -27,7 +32,7 @@ class EspaciosScreen extends StatelessWidget {
             const Text(
               'Espacios culturales que no te puedes perder',
               style: TextStyle(
-                color: Color.fromARGB(255, 1, 58, 105), // Azul oscuro
+                color: Apptheme.cardsColor, // Azul oscuro
                 fontSize: 28, // Ajustado para que no sea excesivo
                 fontWeight: FontWeight.bold,
               ),

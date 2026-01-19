@@ -1,3 +1,4 @@
+import 'package:fl_pruebaexamen/appTheme/appTheme.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_pruebaexamen/widgets/widgets.dart';
 
@@ -51,9 +52,13 @@ class _OrganizaviajescreenState extends State<Organizaviajescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 219, 217, 217),
+      backgroundColor: Apptheme.backgroundScreens,
       appBar: AppBar(
         automaticallyImplyLeading: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: Image.network(
           "https://1000logos.net/wp-content/uploads/2021/04/Iberia-logo.png",
           height: 100,

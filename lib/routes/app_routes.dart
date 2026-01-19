@@ -1,6 +1,4 @@
 import 'package:fl_pruebaexamen/models/modals.dart';
-import 'package:fl_pruebaexamen/screens/EspaciosScreen.dart';
-import 'package:fl_pruebaexamen/screens/OrganizaViajeScreen.dart';
 import 'package:fl_pruebaexamen/screens/screens.dart';
 import 'package:flutter/material.dart';
 
