@@ -1,3 +1,4 @@
+import 'package:fl_pruebaexamen/appTheme/appTheme.dart';
 import 'package:fl_pruebaexamen/screens/screens.dart';
 import 'package:fl_pruebaexamen/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 166, 3, 3),
+      backgroundColor: Apptheme.primary,
       body: CustomScrollView(
         slivers: [
           const _CustomAppBar(),
@@ -28,7 +29,7 @@ class _CustomAppBar extends StatelessWidget {
       floating: false,
       pinned: true,
       snap: false,
-      backgroundColor: const Color.fromARGB(255, 166, 3, 3),
+      backgroundColor: Apptheme.primary,
       flexibleSpace: FlexibleSpaceBar(
         background: SafeArea(
           child: Center(
@@ -116,7 +117,7 @@ class _bodyForm extends StatelessWidget {
                     keyboardType: TextInputType.emailAddress,
                     suffixIcon: Icon(
                       Icons.remove_red_eye_outlined,
-                      color: const Color.fromARGB(255, 255, 0, 0),
+                      color: Apptheme.primary,
                     ),
                     obscureText: true,
                     formProperty: 'password',
@@ -129,17 +130,11 @@ class _bodyForm extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: null,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 166, 3, 3),
+                        backgroundColor: Apptheme.primary,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.zero,
                         ),
-                        disabledBackgroundColor: const Color.fromARGB(
-                          //Boton dehabilitado sin style
-                          255,
-                          166,
-                          3,
-                          3,
-                        ),
+                        disabledBackgroundColor: Apptheme.primary,
                       ),
                       child: const Text(
                         'Iniciar sesión',
@@ -154,7 +149,7 @@ class _bodyForm extends StatelessWidget {
                       "¿Has olvidado tu contraseña?",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: const Color.fromARGB(255, 0, 0, 0),
+                        color: Colors.black,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -171,7 +166,7 @@ class _bodyForm extends StatelessWidget {
               "Continua como invitado",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: const Color.fromARGB(255, 255, 255, 255),
+                color: Colors.white,
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
@@ -192,7 +187,7 @@ class _bodyForm extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Icon(Icons.person, color: const Color.fromARGB(255, 166, 3, 3)),
+                Icon(Icons.person, color: Apptheme.primary),
                 Text(
                   "¿Quieres disfrutar de las ventajas de pertenecer a Iberia?",
                   textAlign: TextAlign.center,
@@ -202,7 +197,7 @@ class _bodyForm extends StatelessWidget {
                 ListTile(
                   trailing: Icon(
                     Icons.keyboard_arrow_right_rounded,
-                    color: const Color.fromARGB(255, 255, 0, 0),
+                    color: Apptheme.primary,
                   ),
                   title: Text(
                     textAlign: TextAlign.center,
